@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+@media screen and (max-width: 350px) and (min-height: 571px) {
+    .informacion{
+        position: absolute;
+        bottom: 2em;
+    }
+}
+
+.lateral {
+    background-color: #06272e;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Perfil */
+.nav{
+    display: flex;
+    min-width: 127px;
+    height: 27px;
+    order: 1;
+    gap: 20px;
+    list-style-type: none;
+    text-size-adjust:none ;
+    color: white;
+}
+
+.nav-link img{
+    width: 26px;
+}
+
+.nav-link span{
+    display: none;
+}
+
+
+.perfil__circulo{
+    border-radius: 50%;
+    height: 5.5em;
+    overflow: hidden;
+    margin: 0;
+    width: 5.5em;
+}
+
+.perfil__foto{
+    width:100%;
+}
+
+.perfil__nombres{
+    color: #fff;
+    font-size: 1.25em;
+    margin-left: 0.5em;
+    width: 60%;
+}
+
+.perfil__nombres, .perfil__circulo{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Información */
+.informacion{
+    color: white;
+    position: absolute;
+    bottom: 1em;
+}
+
+.informacion__titulo{
+    font-size: 1.13em;
+}
+
+/* Habilidad */
+
+.habilidades{
+    padding: 0;
+}
+
+.habilidad{
+    background-color: #0f6a62;
+    color: #fff;
+    display: inline-block;
+    font-size: 0.80em;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+.habilidad--proyecto{
+    background-color: #29597C;
+    color: #fff;
+    display: inline-block;
+    font-size: 0.80em;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+.nav{
+    flex-direction: column;
+    gap: 2px;
+    height: auto;
+    width: 100%;
+    transition: 1s all;
+}
+
+.nav-link{
+    position: relative;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 1.5rem;
+    color: var(--grey);
+    text-decoration: none;
+    transition: 1s all;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    display: none;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--purple);
+}
+
+.nav-link span{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-link:hover{
+    background: rgb(165,95,235);
+    background: linear-gradient(90deg, rgba(165,95,235,0.9223039557619923) 0%, var(--blackSecondary) 3%);
+}
+
+.nav-link:hover::before {
+    display: block;
+}
+
+.nav-link:hover img{
+    filter: brightness(0) saturate(100%) invert(43%) sepia(54%) saturate(1037%) hue-rotate(232deg) brightness(96%) contrast(92%);
+}
+
+.nav-link:hover span{
+    color: var(--purple)
+}
